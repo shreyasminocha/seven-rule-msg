@@ -1,6 +1,6 @@
 # seven-rule-msg
 
-[![Build status](https://img.shields.io/travis/shreyasminocha/seven-rule-msg.svg)](//travis-ci.com/shreyasminocha/seven-rule-msg)
+[![Build status](https://img.shields.io/travis/com/shreyasminocha/seven-rule-msg/master.svg)](//travis-ci.org/shreyasminocha/seven-rule-msg)
 [![Npm version](https://img.shields.io/npm/v/seven-rule-msg.svg)](//npmjs.com/package/seven-rule-msg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](//shreyas.mit-license.org/2019)
 [![Commit message style](https://img.shields.io/badge/commit%20messages-seven%20rules-blue.svg)](//chris.beams.io/posts/git-commit)
