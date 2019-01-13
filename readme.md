@@ -1,11 +1,11 @@
 # seven-rule-msg
 
-[![Build status](https://img.shields.io/travis/shreyasminocha/seven-rule-msg.svg)](#)
+[![Build status](https://img.shields.io/travis/shreyasminocha/seven-rule-msg.svg)](//travis-ci.com/shreyasminocha/seven-rule-msg)
 [![Npm version](https://img.shields.io/npm/v/seven-rule-msg.svg)](//npmjs.com/package/seven-rule-msg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](//shreyas.mit-license.org/2019)
 [![Commit message style](https://img.shields.io/badge/commit%20messages-seven%20rules-blue.svg)](//chris.beams.io/posts/git-commit)
 
-![seven-rule-msg in action](https://github.com/shreyasminocha/seven-rule-msg/blog/master/media/demo.jpg)
+![seven-rule-msg in action](https://github.com/shreyasminocha/seven-rule-msg/blob/master/media/demo.jpg)
 
 Minimal, opinionated commit message validator.
 
