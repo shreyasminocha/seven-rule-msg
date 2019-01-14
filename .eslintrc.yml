@@ -1,0 +1,27 @@
+parserOptions:
+    ecmaVersion: 2018
+
+extends:
+    - shreyasminocha/node
+    - shreyasminocha/ava
+
+overrides:
+    -
+        files: [cli.js, lib/log.js]
+        rules:
+            no-console: off
+
+    -
+        files: [index.js, cli.js]
+        rules:
+            no-lonely-if: off
+
+    -
+        files: cli.js
+        rules:
+            no-process-exit: off
+
+    -
+        files: test/tests.js
+        rules:
+            security/detect-non-literal-fs-filename: off

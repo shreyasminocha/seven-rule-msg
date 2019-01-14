@@ -1,0 +1,47 @@
+{
+  "name": "seven-rule-msg",
+  "version": "0.1.0",
+  "description": "Minimal, opinionated commit message validator",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava --verbose && eslint **/*.js"
+  },
+  "bin": {
+    "seven-rule-msg": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shreyasminocha/seven-rule-msg.git"
+  },
+  "keywords": [
+    "commit-msg",
+    "commitlint",
+    "git",
+    "sevenrules"
+  ],
+  "author": "Shreyas Minocha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shreyasminocha/seven-rule-msg/issues"
+  },
+  "homepage": "https://github.com/shreyasminocha/seven-rule-msg#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "log-symbols": "^2.2.0",
+    "meow": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=10.1.0"
+  },
+  "devDependencies": {
+    "ava": "^1.0.1",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-shreyasminocha": "^2.0.0",
+    "eslint-plugin-ava": "^5.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-unicorn": "^6.0.1"
+  }
+}

@@ -1,0 +1,5 @@
+This subject is perfectly fine
+
+However, the issue with this commit message is the its body is way too long. To
+be precise, its length is longer than the mandated seventy-two characters. Hence,
+this commit message too shall fail.

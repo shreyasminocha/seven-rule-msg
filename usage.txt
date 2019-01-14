@@ -1,0 +1,24 @@
+Usage: seven-rule-msg [options] [arguments]
+
+Options:
+    -s, --silent   Suppress output        [boolean]
+    -v, --verbose  Show verbose output    [boolean]
+    -f, --file     Load a file            [string]
+    -h, --help     Show help              [boolean]
+    -v, --version  Show version           [boolean]
+
+Notes:
+    Do not use --silent with --verbose
+
+Examples:
+    Validate a commit message passed as an argument
+        $ seven-rule-msg 'Fix all the stuff'
+
+    Validate a message from a file
+        $ seven-rule-msg -f COMMIT_EDITMSG
+
+    Show verbose output
+        $ seven-rule-msg [-v|--verbose] 'Fix all the stuff'
+
+    Suppress output
+        $ seven-rule-msg [-s|--silent] 'Fix all the stuff'

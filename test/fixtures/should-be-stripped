@@ -1,0 +1,33 @@
+
+
+
+# If applied, this commit will…
+A commit message, this is
+
+# Explain why this change is being made
+¯\_(ツ)_/¯
+
+Trailing whitespace for you?  		
+	 		
+
+
+# Provide links to any relevant tickets, articles or other resources
+Resolves #571
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Changes to be committed:
+#	modified:   foo
+#	modified:   bar
+#	deleted:    baz
+#	added:      yee
+#
+# Untracked files:
+#	bazBaz
+#	lel
+#	FOO/
+#
+
+
