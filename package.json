@@ -27,6 +27,7 @@
   "homepage": "https://github.com/shreyasminocha/seven-rule-msg#readme",
   "dependencies": {
     "chalk": "^2.4.1",
+    "get-stdin": "^7.0.0",
     "log-symbols": "^2.2.0",
     "meow": "^5.0.0"
   },

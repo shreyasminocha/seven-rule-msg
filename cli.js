@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const meow = require('meow');
+const getStdin = require('get-stdin');
 const fs = require('fs');
 const validate = require('.');
 const log = require('./lib/log');
@@ -24,47 +25,50 @@ if (cli.flags.silent && cli.flags.verbose) {
 
 let commitMessage;
 
-if (cli.flags.file !== undefined) {
-    // TODO: Use top level await
-    commitMessage = fs.readFileSync(cli.flags.file, { encoding: 'utf8' });
-} else if (cli.input.length > 0) {
-    [commitMessage] = cli.input;
-} else {
-    process.exit(0);
-}
-
-if (!cli.flags.silent) {
-    log(); // Leading new line
-}
-
-const results = validate(commitMessage);
-let exitCode = 0;
-
-for (const result of results) {
-    switch (result.type) {
-    case 'fail':
-        if (!cli.flags.silent) {
-            log.error(result.message);
-        }
-
-        if (exitCode === 0) { exitCode = 1; }
-
-        break;
-    case 'pass':
-        if (!cli.flags.silent && cli.flags.verbose) {
-            log.success(result.message);
-        }
-
-        break;
-    case 'info':
-        if (!cli.flags.silent && cli.flags.verbose) {
-            log.info(result.message);
-        }
-
-        break;
-    default:
-        throw new Error(`Internal Error: Invalid result type '${result.type}'`);
+async function main() {
+    if (cli.flags.file !== undefined) {
+        commitMessage = fs.readFileSync(cli.flags.file, { encoding: 'utf8' });
+    } else if (cli.input.length > 0) {
+        [commitMessage] = cli.input;
+    } else {
+        commitMessage = await getStdin() || process.exit(0);
     }
+
+    if (!cli.flags.silent) {
+        log(); // Leading new line
+    }
+
+    const results = validate(commitMessage);
+    let exitCode = 0;
+
+    for (const result of results) {
+        switch (result.type) {
+        case 'fail':
+            if (!cli.flags.silent) {
+                log.error(result.message);
+            }
+
+            if (exitCode === 0) { exitCode = 1; }
+
+            break;
+        case 'pass':
+            if (!cli.flags.silent && cli.flags.verbose) {
+                log.success(result.message);
+            }
+
+            break;
+        case 'info':
+            if (!cli.flags.silent && cli.flags.verbose) {
+                log.info(result.message);
+            }
+
+            break;
+        default:
+            throw new Error(`Internal Error: Invalid result type '${result.type}'`);
+        }
+    }
+
+    process.exit(exitCode);
 }
 
-process.exit(exitCode);
+main();
