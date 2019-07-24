@@ -27,6 +27,7 @@ All rules are inspired from [Chris' post and its predecessors](https://chris.bea
 - Beautiful output
 - Read from `$1`
 - Read from file
+- Read from `STDIN`
 - Verbose mode
 - Silent mode
 
@@ -54,6 +55,12 @@ seven-rule-msg 'Fix all the stuff'
 
 ```sh
 seven-rule-msg [--file|-f] <path-to-file>
+```
+
+#### `STDIN`
+
+```sh
+echo 'Fix all the stuff' | seven-rule-msg
 ```
 
 ### As git hook

@@ -17,6 +17,9 @@ Examples:
     Validate a message from a file
         $ seven-rule-msg -f COMMIT_EDITMSG
 
+    Validate a message from STDIN
+        $ echo 'Fix all the stuff' | seven-rule-msg
+
     Show verbose output
         $ seven-rule-msg [-v|--verbose] 'Fix all the stuff'
 
