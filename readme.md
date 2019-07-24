@@ -74,14 +74,36 @@ import validate from 'seven-rule-msg';
 const results = validate('A nice lil commit message');
 ```
 
-#### `validate(commitMessage: String)`
+#### `validate(commitMessage: string)`
 
-Return value: `[Object]`, length `7`, consisting of objects with the following keys:
-
-- `type`: `String` (possible values: `pass`, `fail`, `info`)
-- `message`: `String`
+- Return value: `Result[]`
+    - Length: `7`
 
 The `i`th element of the returned array corresponds to the `i + 1`th rule.
+
+```ts
+interface Result {
+    readonly rule: Rule,
+    readonly type: ResultType
+}
+```
+
+```ts
+interface Rule {
+    readonly message: string,
+    readonly test?: (commitMessage: string) => boolean;
+}
+```
+
+`Rule`s without `test` methods are informative only. In other words, they cannot be reliably checked programmatically.
+
+```ts
+enum ResultType {
+    pass = 'pass',
+    fail = 'fail',
+    info = 'info'
+}
+```
 
 ## Badge
 
