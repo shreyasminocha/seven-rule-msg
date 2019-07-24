@@ -1,8 +1,8 @@
-const fs = require('fs');
-const { promisify } = require('util');
-const test = require('ava');
-const validate = require('..');
-const strip = require('../lib/strip');
+import fs from 'fs';
+import { promisify } from 'util';
+import test from 'ava';
+import validate from '..';
+import strip from '../lib/strip';
 
 // TODO: Use fs.promises when it no longer displays an ugly experimental warning
 const readFile = promisify(fs.readFile);
@@ -10,18 +10,8 @@ const readFile = promisify(fs.readFile);
 const readFileOpts = { encoding: 'utf8' };
 
 test('results have expected format', (t) => {
-    const expectedResultTypes = ['pass', 'fail', 'info'];
-
     const results = validate('Message.');
-
     t.is(results.length, 7);
-
-    for (const result of results) {
-        t.is(typeof result.type, 'string');
-        t.true(expectedResultTypes.includes(result.type));
-
-        t.is(typeof result.message, 'string');
-    }
 });
 
 test('strip', async (t) => {

@@ -1,10 +1,11 @@
-#!/usr/bin/env node
+#!/usr/bin/env node --experimental-modules --no-warnings
 
-const meow = require('meow');
-const getStdin = require('get-stdin');
-const fs = require('fs');
-const validate = require('.');
-const log = require('./lib/log');
+import meow from 'meow';
+import getStdin from 'get-stdin';
+import fs from 'fs';
+import validate from './index';
+import log from './lib/log';
+import ResultType from './lib/types/result-type';
 
 const helpText = fs.readFileSync('./usage.txt', { encoding: 'utf8' });
 
@@ -23,7 +24,7 @@ if (cli.flags.silent && cli.flags.verbose) {
     cli.showHelp();
 }
 
-let commitMessage;
+let commitMessage: string;
 
 async function main() {
     if (cli.flags.file !== undefined) {
@@ -43,23 +44,23 @@ async function main() {
 
     for (const result of results) {
         switch (result.type) {
-        case 'fail':
+        case ResultType.fail:
             if (!cli.flags.silent) {
-                log.error(result.message);
+                log.error(result.rule.message);
             }
 
             if (exitCode === 0) { exitCode = 1; }
 
             break;
-        case 'pass':
+        case ResultType.pass:
             if (!cli.flags.silent && cli.flags.verbose) {
-                log.success(result.message);
+                log.success(result.rule.message);
             }
 
             break;
-        case 'info':
+        case ResultType.info:
             if (!cli.flags.silent && cli.flags.verbose) {
-                log.info(result.message);
+                log.info(result.rule.message);
             }
 
             break;

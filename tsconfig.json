@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "umd",
+        "target": "es6",
+        "outDir": "dist",
+        "esModuleInterop": true,
+        "moduleResolution": "node"
+    },
+    "include": [
+        "cli.ts",
+        "index.ts"
+    ],
+    "exclude": [
+        "test/**/*.js"
+    ]
+}

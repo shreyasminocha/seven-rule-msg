@@ -2,7 +2,7 @@
 
 // TODO: Respect git's core.commentchar
 
-function strip(rawCommitMessage) {
+function strip(rawCommitMessage: string) {
     const trailingWhitespace = /[ \t\f\v]+$/gm;
     const commentary = /^#.*/gm;
     const consecutiveEmptyLines = /\n{3,}/g;
@@ -15,4 +15,4 @@ function strip(rawCommitMessage) {
         .replace(leadingTrailingEmptyLines, '');
 }
 
-module.exports = strip;
+export default strip;
