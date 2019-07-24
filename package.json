@@ -6,12 +6,14 @@
   "scripts": {
     "test": "ava --verbose",
     "compile": "tsc",
+    "build": "npm run compile",
     "watch": "tsc -w -p .",
-    "prepublishOnly": "npm run compile"
+    "prepublishOnly": "npm run build"
   },
   "bin": {
     "seven-rule-msg": "dist/cli.js"
   },
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shreyasminocha/seven-rule-msg.git"

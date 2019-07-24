@@ -4,7 +4,8 @@
         "target": "es6",
         "outDir": "dist",
         "esModuleInterop": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "declaration": true
     },
     "include": [
         "cli.ts",
