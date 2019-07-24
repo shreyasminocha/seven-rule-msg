@@ -2,7 +2,7 @@ import fs from 'fs';
 import { promisify } from 'util';
 import test from 'ava';
 import validate from '..';
-import strip from '../lib/strip';
+import strip from '../src/lib/strip.ts';
 
 // TODO: Use fs.promises when it no longer displays an ugly experimental warning
 const readFile = promisify(fs.readFile);
