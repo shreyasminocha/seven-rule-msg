@@ -36,15 +36,15 @@
     "chalk": "^2.4.2",
     "get-stdin": "^7.0.0",
     "log-symbols": "^2.2.0",
-    "meow": "^5.0.0",
-    "typescript": "^3.5.3"
+    "meow": "^5.0.0"
   },
   "engines": {
     "node": ">=10.1.0"
   },
   "devDependencies": {
     "ava": "^1.4.1",
-    "ts-node": "^8.3.0"
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
   },
   "files": [
     "dist/**/*.js",
