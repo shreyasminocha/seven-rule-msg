@@ -52,7 +52,7 @@ async function main() {
                 log.error(result.rule.message);
             }
 
-            if (exitCode === 0) { exitCode = 1; }
+            exitCode = 1;
 
             break;
         case ResultType.pass:
