@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](//shreyas.mit-license.org/2019)
 [![Commit message style](https://img.shields.io/badge/commit%20messages-seven%20rules-blue.svg)](//chris.beams.io/posts/git-commit)
 
-![seven-rule-msg in action](https://github.com/shreyasminocha/seven-rule-msg/blob/master/media/demo.jpg)
+![seven-rule-msg in action](https://raw.githubusercontent.com/shreyasminocha/seven-rule-msg/master/media/demo.jpg)
 
 Minimal, opinionated commit message validator.
 
