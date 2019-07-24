@@ -7,7 +7,7 @@ import validate from './index';
 import log from './lib/log';
 import ResultType from './lib/types/result-type';
 
-const helpText = fs.readFileSync('./usage.txt', { encoding: 'utf8' });
+const helpText = fs.readFileSync('../usage.txt', { encoding: 'utf8' });
 
 const cli = meow(helpText, {
     description: 'Validate commit messages against the seven rules of commit messages.',

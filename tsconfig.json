@@ -7,11 +7,4 @@
         "moduleResolution": "node",
         "declaration": true
     },
-    "include": [
-        "cli.ts",
-        "index.ts"
-    ],
-    "exclude": [
-        "test/**/*.js"
-    ]
 }
