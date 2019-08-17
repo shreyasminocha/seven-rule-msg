@@ -31,6 +31,25 @@ All rules are inspired from [Chris' post and its predecessors](https://chris.bea
 - Verbose mode
 - Silent mode
 
+## Comparison with other tools
+​
+| Feature | [**`seven-rule-msg`**](//github.com/shreyasminocha/seven-rule-msg) | [`commitlint`](//github.com/conventional-changelog/commitlint) | [`node-commit-msg`](//github.com/clns/node-commit-msg) |
+|---------|:---:|:---:|:---:|
+| Ability to test for seven rules | ✅| ✅| ✅|
+| Designed to test for seven rules | ✅| ❌ | ✅|
+| Opinionated | ✅| ❌ | ❌ |
+| Beautiful output | ✅| ✅| ❌ |
+| Easy installation | ✅| ✅| ❌ |
+| Zero setup | ✅| ✅| ❌ |
+| Does one thing (and does it well) | ✅| ❌ | ❌ |
+| Checks for imperative tense | ❌ <sup>1</sup> | ⚠️ <sup>2</sup> | ⚠️ <sup>3</sup> |
+
+<sup>1</sup> Programmatically checking for imperative tense is non-trivial and error-prone
+
+<sup>2</sup> Deprecated
+
+<sup>3</sup> Requires separate installation of Java 8
+
 ## Installation
 
 Assuming you have [`npm`](//npmjs.com) installed,
