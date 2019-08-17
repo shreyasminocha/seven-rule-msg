@@ -32,7 +32,7 @@ All rules are inspired from [Chris' post and its predecessors](https://chris.bea
 - Silent mode
 
 ## Comparison with other tools
-​
+
 | Feature | [**`seven-rule-msg`**](//github.com/shreyasminocha/seven-rule-msg) | [`commitlint`](//github.com/conventional-changelog/commitlint) | [`node-commit-msg`](//github.com/clns/node-commit-msg) |
 |---------|:---:|:---:|:---:|
 | Ability to test for seven rules | ✅| ✅| ✅|
