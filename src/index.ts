@@ -17,16 +17,7 @@ function validate(commitMessage: string): Result[] {
 
         if (rule.test === undefined) {
             outcome = ResultType.info;
-
-            results.push({
-                rule,
-                type: outcome
-            });
-
-            continue;
-        }
-
-        if (rule.test(strippedMessage)) {
+        } else if (rule.test(strippedMessage)) {
             outcome = ResultType.pass;
         } else {
             outcome = ResultType.fail;
