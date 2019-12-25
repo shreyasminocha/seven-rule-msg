@@ -8,7 +8,7 @@ jobs:
             matrix:
                 node-version:
                     - 10.1.0
-                    - 12.x
+                    - 12.0.0
         steps:
             -
                 uses: actions/checkout@v1
@@ -18,8 +18,8 @@ jobs:
                 with:
                     node-version: '${{ matrix.node-version }}'
             -
-                name: 'npm install, build, and test'
-                run: "npm ci\nnpm run build --if-present\nnpm test\n"
+                name: 'npm test'
+                run: "npm test"
                 env:
                     CI: true
 
